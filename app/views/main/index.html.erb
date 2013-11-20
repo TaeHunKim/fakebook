@@ -1,0 +1,14 @@
+<div>
+  <% if session[:session_id] and @user %>
+    User Logged In : <%= @user.email %>, 
+    <%= link_to "Logout", logout_path, method: :delete %>
+    <%= link_to "Post", posts_path %>
+    <%= link_to "Newsfeed", newsfeed_index_path %>
+    <%= link_to "Friend", friend_path %>
+    <%= link_to "Edit Profile", edit_user_path(@user.id) %>
+  <% else %>
+    <script type="text/javascript">
+      window.location.href="/login"  // put your correct path in a string here
+    </script>
+  <% end %> 
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <%= link_to 'New',new_post_path %> 
+</div>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.content %></td>
+    <td><%= post.updated_at %></td>
+    <td><%= link_to 'Show', post %></td>
+  </tr>
+  <br>
+<% end %>

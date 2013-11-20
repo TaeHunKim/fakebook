@@ -1,0 +1,30 @@
+<%= link_to "New_friend", friend_add_path %>
+
+<h3> Friends </h3>
+<% @friends.each do |friend| %>
+  <div> <%= friend.email%><%= " " %> <%= friend.name %> </div>
+<% end %>
+</br>
+
+
+<h3> Friends required by me </h3>
+<% @req_friends.each do |friend| %>
+  <div> <%= friend.email%><%= " " %> <%= friend.name %> </div>
+<% end %>
+</br>
+
+
+<h3> Friends requires for me </h3>
+<% @reqed_friends.each do |friend| %>
+  <%= form_for(@friendship, url: friend_path, html: {method: "post"}) do |f| %>
+    <%= f.hidden_field :user_id, :value => @user.id %>
+    <%= f.hidden_field :friend_id, :value => User.find_by_email(friend.email).id %>
+    <div> 
+      <%= friend.email%>
+      <%= " " %> 
+      <%= friend.name %> 
+      <%= " " %>
+      <%= f.submit "Allow" %>
+    </div>
+  <% end %>
+<% end %>

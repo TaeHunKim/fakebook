@@ -1,0 +1,11 @@
+
+<% @newsfeeds.each do |newsfeed| %>
+  <tr>
+    <td><%= User.find(newsfeed.user_id).email%></td>
+    <td><%= newsfeed.content %></td>
+    <td><%= newsfeed.image_id %></td>
+    <td><%= newsfeed.updated_at %></td>
+    <td><%= link_to 'Show', post_path(newsfeed.id) %></td>
+  </tr>
+  <br>
+<% end %>

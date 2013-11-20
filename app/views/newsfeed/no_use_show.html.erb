@@ -1,0 +1,12 @@
+<% if @permission == false %>
+  no permission
+<% else %>
+
+<tr>
+  <td><%= User.find(@newsfeed.user_id).email %></td>
+  <td><%= @newsfeed.content %></td>
+  <td><%= @newsfeed.image_id %></td>
+  <td><%= @newsfeed.updated_at %></td>
+</tr>
+
+<% end %>

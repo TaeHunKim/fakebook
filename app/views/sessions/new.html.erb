@@ -1,0 +1,12 @@
+<%= form_tag do %>
+
+  <label for="email"> E-mail: </label>
+  <%= text_field_tag :email, params[:email] %>
+
+  <label for="password"> Password: </label>
+  <%= password_field_tag :password, params[:password] %>
+
+  <%= submit_tag "Login" %>
+
+  <%= link_to "Sign up", new_user_path %>
+<% end %>

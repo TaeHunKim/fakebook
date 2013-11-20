@@ -1,0 +1,15 @@
+<%= form_for(@post) do |f| %>
+  <%= f.hidden_field :user_id, :value => @user.id %>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  <div class = "actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
