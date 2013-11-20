@@ -38067,3 +38067,2156 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-20 20:15:11 +0900
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-20 20:15:11 +0900
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:25:58 +0000
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 941ms (Views: 899.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:25:59 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+
+
+Started GET "/login" for 211.44.60.246 at 2013-11-20 11:26:00 +0000
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 15.1ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/login" for 211.44.60.246 at 2013-11-20 11:26:07 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0fOMjm4fHyx3VO3mZzV3eEZcVzx/x0iedGBFmzcYeA=", "email"=>"rapaellk@naver.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'rapaellk@naver.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'rapaellk@naver.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (21.9ms)[0m  UPDATE "users" SET "session_id" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["session_id", "c48f89893414682883e035934afd6c31"], ["updated_at", Wed, 20 Nov 2013 11:26:07 UTC +00:00]]
+  [1m[36m (103.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://www.rapaellk.com:3000/
+Completed 302 Found in 185ms (ActiveRecord: 126.0ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:26:07 +0000
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:07 +0000
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:26:09 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 75ms (Views: 23.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for 211.44.60.246 at 2013-11-20 11:26:11 +0000
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  Rendered posts/_form.html.erb (14.4ms)
+  Rendered posts/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 211.44.60.246 at 2013-11-20 11:26:33 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0fOMjm4fHyx3VO3mZzV3eEZcVzx/x0iedGBFmzcYeA=", "post"=>{"user_id"=>"1", "content"=>"sdfadfsdas", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000002e40460 @tempfile=#<Tempfile:/tmp/RackMultipart20131120-17281-1a7m0rp>, @original_filename="asd.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"asd.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "images" ("created_at", "local", "original_name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 20 Nov 2013 11:26:33 UTC +00:00], ["local", "assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"], ["original_name", "asd.jpg"], ["updated_at", Wed, 20 Nov 2013 11:26:33 UTC +00:00]]
+  [1m[36m (18.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "image_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "sdfadfsdas"], ["created_at", Wed, 20 Nov 2013 11:26:33 UTC +00:00], ["image_id", 6], ["updated_at", Wed, 20 Nov 2013 11:26:33 UTC +00:00], ["user_id", 1]]
+  [1m[35m (16.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://www.rapaellk.com:3000/posts
+Completed 302 Found in 57ms (ActiveRecord: 36.8ms)
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:26:33 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:26:33 +0000
+
+
+Started GET "/posts/16" for 211.44.60.246 at 2013-11-20 11:26:35 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:26:35 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.4ms)
+
+
+Started GET "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:26:49 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.9ms)
+
+
+Started GET "/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:26:58 +0000
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" ORDER BY "images"."id" DESC LIMIT 1[0m
+
+
+Started GET "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:28:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.7ms)
+
+
+Started GET "/images/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:28:28 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.7ms)
+
+
+Started GET "/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:28:37 +0000
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" ORDER BY "images"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mUPDATE "images" SET "local" = ?, "updated_at" = ? WHERE "images"."id" = 6[0m  [["local", "/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"], ["updated_at", Wed, 20 Nov 2013 11:30:00 UTC +00:00]]
+  [1m[35m (44.1ms)[0m  commit transaction
+
+
+Started GET "/posts/16" for 211.44.60.246 at 2013-11-20 11:30:05 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+
+Started GET "/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:30:06 +0000
+
+ActionController::RoutingError (No route matches [GET] "/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (34.9ms)
+
+
+Started GET "/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:30:08 +0000
+
+ActionController::RoutingError (No route matches [GET] "/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (43.1ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "images" SET "local" = ?, "updated_at" = ? WHERE "images"."id" = 6  [["local", "assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"], ["updated_at", Wed, 20 Nov 2013 11:30:28 UTC +00:00]]
+  [1m[36m (18.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts/16" for 211.44.60.246 at 2013-11-20 11:30:32 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+
+Started GET "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:30:33 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.4ms)
+
+
+Started GET "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:30:35 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.2ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:56 +0000
+
+
+Started DELETE "/logout" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s0fOMjm4fHyx3VO3mZzV3eEZcVzx/x0iedGBFmzcYeA="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'c48f89893414682883e035934afd6c31' LIMIT 1
+Redirected to http://www.rapaellk.com:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:57 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/login" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:30:58 +0000
+
+
+Started POST "/login" for 211.44.60.246 at 2013-11-20 11:31:04 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8r94Ph7BVqQPaN2ntrRLtCGYtPV/y3ZMDiP9YZkj1E=", "email"=>"rapaellk@nate.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'rapaellk@nate.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'rapaellk@nate.com' AND "users"."id" != 4) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "session_id" = ?, "updated_at" = ? WHERE "users"."id" = 4[0m  [["session_id", "98f8ed49dbb9fb2785940b29e29e3437"], ["updated_at", Wed, 20 Nov 2013 11:31:04 UTC +00:00]]
+  [1m[35m (41.4ms)[0m  commit transaction
+Redirected to http://www.rapaellk.com:3000/
+Completed 302 Found in 47ms (ActiveRecord: 42.4ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:31:04 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:31:05 +0000
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:31:06 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC[0m  [["user_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/13" for 211.44.60.246 at 2013-11-20 11:31:07 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/12" for 211.44.60.246 at 2013-11-20 11:31:09 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "12"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/11" for 211.44.60.246 at 2013-11-20 11:31:11 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/photos/4/aXDZKIUQRUVSikCZiLCrEw_screenshot.png" for 211.44.60.246 at 2013-11-20 11:31:11 +0000
+
+
+Started GET "/assets/photos/4/aXDZKIUQRUVSikCZiLCrEw_screenshot.png" for 211.44.60.246 at 2013-11-20 11:31:16 +0000
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "images" SET "local" = ?, "updated_at" = ? WHERE "images"."id" = 6  [["local", "/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg"], ["updated_at", Wed, 20 Nov 2013 11:31:58 UTC +00:00]]
+  [1m[36m (60.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/newsfeed" for 211.44.60.246 at 2013-11-20 11:33:13 +0000
+Processing by NewsfeedController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (user_id IN (SELECT friend_id FROM "friendships" WHERE "friendships"."user_id" = ?) or user_id = 4) ORDER BY updated_at DESC[0m  [["user_id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered newsfeed/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 37ms (Views: 25.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/16" for 211.44.60.246 at 2013-11-20 11:33:15 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" INNER JOIN "friendships" ON "users"."id" = "friendships"."friend_id" WHERE "friendships"."user_id" = ? AND "users"."id" = 1 LIMIT 1  [["user_id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 61ms (Views: 48.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:33:15 +0000
+
+
+Started DELETE "/logout" for 211.44.60.246 at 2013-11-20 11:33:21 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a8r94Ph7BVqQPaN2ntrRLtCGYtPV/y3ZMDiP9YZkj1E="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = '98f8ed49dbb9fb2785940b29e29e3437' LIMIT 1[0m
+Redirected to http://www.rapaellk.com:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/login" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:22 +0000
+
+
+Started POST "/login" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qhVziQUr9Xkt3vdcnG9GYYiP33Da08LC3XIwpr+I8xA=", "email"=>"rapaellk@naver.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'rapaellk@naver.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'rapaellk@naver.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_id" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["session_id", "af0e1e3d254cbd8f1f4c5a1bc63f64f5"], ["updated_at", Wed, 20 Nov 2013 11:33:31 UTC +00:00]]
+  [1m[36m (22.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://www.rapaellk.com:3000/
+Completed 302 Found in 28ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1
+  Rendered main/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:33:31 +0000
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:33:33 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/16" for 211.44.60.246 at 2013-11-20 11:33:33 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "16"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:33:34 +0000
+
+
+Started GET "/posts/new" for 211.44.60.246 at 2013-11-20 11:33:40 +0000
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 211.44.60.246 at 2013-11-20 11:33:59 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qhVziQUr9Xkt3vdcnG9GYYiP33Da08LC3XIwpr+I8xA=", "post"=>{"user_id"=>"1", "content"=>"sadfsdfasf", "image"=>#<ActionDispatch::Http::UploadedFile:0x000000037d7f28 @tempfile=#<Tempfile:/tmp/RackMultipart20131120-17281-mqdbnc>, @original_filename="IMG_6145.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"IMG_6145.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Post"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "images" ("created_at", "local", "original_name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Wed, 20 Nov 2013 11:33:59 UTC +00:00], ["local", "assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG"], ["original_name", "IMG_6145.JPG"], ["updated_at", Wed, 20 Nov 2013 11:33:59 UTC +00:00]]
+  [1m[36m (41.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "image_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "sadfsdfasf"], ["created_at", Wed, 20 Nov 2013 11:33:59 UTC +00:00], ["image_id", 7], ["updated_at", Wed, 20 Nov 2013 11:33:59 UTC +00:00], ["user_id", 1]]
+  [1m[35m (35.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://www.rapaellk.com:3000/posts
+Completed 302 Found in 86ms (ActiveRecord: 78.6ms)
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:33:59 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:59 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:33:59 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:00 +0000
+
+
+Started GET "/posts/17" for 211.44.60.246 at 2013-11-20 11:34:01 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG" for 211.44.60.246 at 2013-11-20 11:34:02 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.5ms)
+
+
+Started GET "/posts/17" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/posts/17" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:05 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (40.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (71.3ms)
+
+
+Started GET "/posts/17" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "17"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:06 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:07 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:07 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:07 +0000
+
+
+Started GET "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG" for 211.44.60.246 at 2013-11-20 11:34:07 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (33.5ms)
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:07 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:07 +0000
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:10 +0000
+
+
+Started DELETE "/logout" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qhVziQUr9Xkt3vdcnG9GYYiP33Da08LC3XIwpr+I8xA="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'af0e1e3d254cbd8f1f4c5a1bc63f64f5' LIMIT 1
+Redirected to http://www.rapaellk.com:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/login" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:12 +0000
+
+
+Started POST "/login" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0ImITKOeYeNr32YcjsOeaygSx3nbdE2NE51p8ETTg4=", "email"=>"rapaellk@naver.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'rapaellk@naver.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'rapaellk@naver.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "session_id" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["session_id", "e4ee4a379131eb8f4ce3014df4c11742"], ["updated_at", Wed, 20 Nov 2013 11:34:17 UTC +00:00]]
+  [1m[35m (21.9ms)[0m  commit transaction
+Redirected to http://www.rapaellk.com:3000/
+Completed 302 Found in 63ms (ActiveRecord: 23.1ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+Processing by MainController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1[0m
+  Rendered main/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:34:17 +0000
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:34:18 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/17" for 211.44.60.246 at 2013-11-20 11:34:19 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG" for 211.44.60.246 at 2013-11-20 11:34:20 +0000
+
+ActionController::RoutingError (No route matches [GET] "/images/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/ubuntu/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.8ms)
+
+
+Started GET "/posts/16" for 211.44.60.246 at 2013-11-20 11:34:24 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/photos/1/VRM79b9gH0aptO0EJMjkKQ_asd.jpg" for 211.44.60.246 at 2013-11-20 11:34:24 +0000
+  [1m[36mImage Load (1.7ms)[0m  [1mSELECT "images".* FROM "images"[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" ORDER BY "images"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  UPDATE "images" SET "local" = ?, "updated_at" = ? WHERE "images"."id" = 7  [["local", "/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG"], ["updated_at", Wed, 20 Nov 2013 11:35:13 UTC +00:00]]
+  [1m[36m (37.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:35:15 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:15 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:15 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:15 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:15 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:15 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:15 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+
+
+Started GET "/posts/17" for 211.44.60.246 at 2013-11-20 11:35:16 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG" for 211.44.60.246 at 2013-11-20 11:35:17 +0000
+
+
+Started GET "/posts/17" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 64ms (Views: 23.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/assets/photos/1/RjHzjXeZZoHOd0cyK6Rn7Q_IMG_6145.JPG" for 211.44.60.246 at 2013-11-20 11:35:43 +0000
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:35:44 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 211.44.60.246 at 2013-11-20 11:35:45 +0000
+Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g0ImITKOeYeNr32YcjsOeaygSx3nbdE2NE51p8ETTg4=", "post"=>{"user_id"=>"1", "content"=>"sadfsdf", "image"=>#<ActionDispatch::Http::UploadedFile:0x00000002d705a8 @tempfile=#<Tempfile:/tmp/RackMultipart20131120-17281-1n3d8f1>, @original_filename="yslogo_m.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"yslogo_m.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "images" ("created_at", "local", "original_name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Wed, 20 Nov 2013 11:36:06 UTC +00:00], ["local", "/assets/photos/1/2EutyLS1uYkmo87KbWZtWA_yslogo_m.png"], ["original_name", "yslogo_m.png"], ["updated_at", Wed, 20 Nov 2013 11:36:06 UTC +00:00]]
+  [1m[35m (65.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (25.4ms)[0m  INSERT INTO "posts" ("content", "created_at", "image_id", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["content", "sadfsdf"], ["created_at", Wed, 20 Nov 2013 11:36:06 UTC +00:00], ["image_id", 8], ["updated_at", Wed, 20 Nov 2013 11:36:06 UTC +00:00], ["user_id", 1]]
+  [1m[36m (38.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://www.rapaellk.com:3000/posts
+Completed 302 Found in 142ms (ActiveRecord: 130.5ms)
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:06 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:07 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:07 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:07 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:07 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:07 +0000
+
+
+Started GET "/posts/18" for 211.44.60.246 at 2013-11-20 11:36:08 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/photos/1/2EutyLS1uYkmo87KbWZtWA_yslogo_m.png" for 211.44.60.246 at 2013-11-20 11:36:08 +0000
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:36:12 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 211.44.60.246 at 2013-11-20 11:36:13 +0000
+Processing by MainController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  Rendered main/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 211.44.60.246 at 2013-11-20 11:36:13 +0000
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:36:15 +0000
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/18" for 211.44.60.246 at 2013-11-20 11:36:16 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mImage Load (0.1ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/photos/1/2EutyLS1uYkmo87KbWZtWA_yslogo_m.png" for 211.44.60.246 at 2013-11-20 11:36:17 +0000
+
+
+Started DELETE "/posts/18" for 211.44.60.246 at 2013-11-20 11:36:18 +0000
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g0ImITKOeYeNr32YcjsOeaygSx3nbdE2NE51p8ETTg4=", "id"=>"18"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  [1m[35mImage Load (0.1ms)[0m  SELECT "images".* FROM "images" WHERE "images"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "images" WHERE "images"."id" = ?  [["id", 8]]
+  [1m[36m (56.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 18]]
+  [1m[35m (48.3ms)[0m  commit transaction
+Redirected to http://www.rapaellk.com:3000/posts
+Completed 302 Found in 113ms (ActiveRecord: 106.4ms)
+
+
+Started GET "/posts" for 211.44.60.246 at 2013-11-20 11:36:18 +0000
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_id" = 'e4ee4a379131eb8f4ce3014df4c11742' LIMIT 1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? ORDER BY updated_at DESC  [["user_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/friendship.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/main.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/newsfeed.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/users.css?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/friendship.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/main.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/newsfeed.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/users.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 211.44.60.246 at 2013-11-20 11:36:19 +0000

@@ -28,7 +28,7 @@ class PostsController < ApplicationController
       File.open(path+"/"+filename,'wb') do |file|
         file.write(im)
       end
-      image_rec = Image.create(original_name: uploaded_io.original_filename, local: 'assets/photos/'+@user.id.to_s+"/"+filename)
+      image_rec = Image.create(original_name: uploaded_io.original_filename, local: '/assets/photos/'+@user.id.to_s+"/"+filename)
       image_rec.save
       image_id = image_rec.id
     end
